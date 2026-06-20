@@ -1,0 +1,16 @@
+{
+  "name": "crud_todo_project",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mysql2": "^3.22.5",
+    "readline-sync": "^1.4.10",
+    "sequelize": "^6.37.8"
+  }
+}
