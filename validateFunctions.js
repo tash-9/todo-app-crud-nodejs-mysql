@@ -23,18 +23,19 @@ function validateName(name) {
 }
 
 function validateDate(dateString) {
-  const dateRegex = /^(\d{2}\/\d{2}\/\d{4}|\d{4}-\d{2}-\d{2})$/;
-  if (!dateRegex.test(dateString)) return false;
-  let day, month, year;
-  if (dateString.includes('/')) {
-    [day, month, year] = dateString.split('/').map(Number);
-  } else {
-    [year, month, day] = dateString.split('-').map(Number);
+  const dateRegex = /^(\d{2}[\/.-]\d{2}[\/.-]\d{4})$/;
+  if (!dateRegex.test(dateString)) {
+    return false;
   }
+  const [day, month, year] = dateString
+    .split(/[\/.-]/)
+    .map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
-  return date.getUTCFullYear() === year
-    && date.getUTCMonth() === month - 1
-    && date.getUTCDate() === day;
+  return (
+    date.getUTCFullYear() === year &&
+    date.getUTCMonth() === month - 1 &&
+    date.getUTCDate() === day
+  );
 }
 
 function validatePriority(priority) {

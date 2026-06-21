@@ -94,10 +94,10 @@ async function displayTaskMenu(userId) {
       const newDate = prompt(`Current Due Date: ${task.dueDate}\nEnter new due date:\n`);
       if (newDate) updates.dueDate = newDate.trim();
 
-      const newPriority = prompt(`Current Priority: ${task.priority}\nEnter new priority:\n`);
+      const newPriority = prompt(`Current Priority: ${task.priority}\nEnter new priority (Low/Medium/High):\n`);
       if (newPriority) updates.priority = newPriority.trim();
 
-      const newStatus = prompt(`Current Status: ${task.status}\nEnter new status:\n`);
+      const newStatus = prompt(`Current Status: ${task.status}\nEnter new status (Pending/Completed):\n`);
       if (newStatus) updates.status = newStatus.trim();
 
       await editTask(userId, taskId, updates);
