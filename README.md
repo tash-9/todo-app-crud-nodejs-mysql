@@ -160,7 +160,6 @@ todo-app/
 ├── package.json            # Project dependencies
 ├── package-lock.json       # Dependency lock file
 ├── .env.example            # Environment variables template
-├── .env                    # Environment variables (not committed)
 ├── .gitignore              # Git ignore rules
 └── README.md               # This file
 ```
