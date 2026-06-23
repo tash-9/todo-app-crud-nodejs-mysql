@@ -19,7 +19,7 @@ A feature-rich console-based TODO application built with **JavaScript**, **Node.
 - ✅ **Data Validation**
   - Email format validation
   - Password strength check (minimum 4 characters)
-  - Date format validation (supports DD/MM/YYYY, YYYY/MM/DD, YYYY-MM-DD)
+  - Date format validation (supports YYYY-MM-DD)
   - Priority validation (Low, Medium, High)
   - Status validation (Pending, Completed)
   - Task not found error handling
